@@ -24,14 +24,13 @@ resetTimer.onclick = function reset() {
 
 function run() {
   milisecond();
-  if (sec == 59) {
+  if (sec == 60) {
     minutes();
     sec = 0;
   }
-  if (ms == 99) {
+  if (ms > 99) {
     seconds();
     ms = 0;
-    console.log(ms);
   }
 }
 
@@ -48,6 +47,8 @@ function seconds() {
   sec += 1;
   if (sec <= 9) {
     document.getElementById("sec").innerHTML = "0" + sec;
+  } else if (sec == 60) {
+    document.getElementById("sec").innerHTML = "00";
   } else {
     document.getElementById("sec").innerHTML = sec;
   }
@@ -57,6 +58,8 @@ function milisecond() {
   ms++;
   if (ms <= 9) {
     document.getElementById("ms").innerHTML = "0" + ms;
+  } else if (ms == 100) {
+    document.getElementById("ms").innerHTML = "00";
   } else {
     document.getElementById("ms").innerHTML = ms;
   }
