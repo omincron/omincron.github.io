@@ -1,0 +1,120 @@
+
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+    font-family: sans-serif;
+    color: white;
+
+}
+
+.timer {
+    padding: 10px, 0px, 10px, 0px;
+    font-size: 100px;
+}
+
+.btn {
+    text-align: center;
+}
+
+.start {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 8px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    text-decoration: none;
+
+    color: white;
+    border-color: white;
+}
+.start:hover{
+    border-color: black;
+}
+.start:active {
+    background-color: black;
+    border-color: black;
+}
+
+.stop {
+   display: inline-block;
+    padding: 6px 12px;
+    margin: 8px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    text-decoration: none;
+
+    color: white;
+    border-color: white;
+}
+.stop:hover {
+    border-color: black;
+}
+.stop:active {
+    background-color: black;
+    border-color: black;
+}
+
+.reset {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 8px;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    text-decoration: none;
+
+    color: white;
+    border-color: white;
+}
+.reset:hover {
+    border-color: black;
+}
+.reset:active {
+    background-color: black;
+    border-color: black;
+}

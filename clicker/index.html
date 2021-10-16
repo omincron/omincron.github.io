@@ -2,17 +2,19 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
 
   <body>
     <header>The Final Frontier</header>
     <p>
       You are an android in the year 2050. You're being send on an expedition to
-      the edge of the galaxy. Click Engine to begin your journey.
+      the edge of the galaxy. Hit Lift Off to begin your journey.
     </p>
-    <button type="button" class="btn btn-primary" onclick="klmClick()">Engine</button>
-    <p id="klmstraveled">0 klms</p>
+    <button id="klmstraveled" onclick="klmClick()">Lift Off</button><br />
+    <button onClick="buyUpgrade()">Mars</button>
+    Upgrade: <span id="Upgrade">0</span><br />
+    Cost: <span id="upgradeCost">10</span>
+
   </body>
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="main.js"></script>  
 </html>
