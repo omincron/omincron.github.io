@@ -1,54 +1,49 @@
-var solar = 0;
-
-function solarClick(number) {
-  solar = solar + number;
-  document.getElementById("solar").innerHTML = solar;
-}
-
-var upgrades = 0;
+var upgrades = 1;
+var km = 0;
+var play = window.setInterval(run, 1000);
+var button = document.getElementById("buyUpgrade");
 
 function buyUpgrade() {
-  var upgradeCost = Math.floor(10 * Math.pow(1.1, upgrades)); //works out the cost of this cursor
-  if (solar >= upgradeCost) {
-    //checks that the player can afford the cursor
-    upgrades = upgrades + 1; //increases number of cursors
-    solar = solar - upgradeCost; //removes the cookies spent
-    document.getElementById("upgrades").innerHTML = upgrades; //updates the number of cursors for the user
-    document.getElementById("solar").innerHTML = solar; //updates the number of cookies for the user
-  }
-  var nextCost = Math.floor(10 * Math.pow(1.1, upgrades)); //works out the cost of the next cursor
-  document.getElementById("upgradeCost").innerHTML = nextCost; //updates the cursor cost for the user
+  upgrades += 1;
+  document.getElementById("upgrades").innerHTML = upgrades - 1;
+  document.getElementById("buyUpgrade").innerHTML = "";
+  document.getElementById("buyUpgrade").classList.remove("btn");
 }
 
-window.setInterval(function () {
-  solarClick(upgrades);
-}, 1000);
-
-var x = 0;
-var play = window.setInterval(run, 1000);
 function run() {
-  if (x == 10) {
+  if (km == 10) {
     Mars();
-  } else if (x == 20) {
+  } else if (km == 43) {
     Europa();
   }
-  document.getElementById("klms").innerHTML = x;
-  x++;
+  document.getElementById("klms").innerHTML = km;
+  km = km + upgrades;
 }
 
 function Mars() {
-  document.getElementById("Area").innerHTML = "You arrived to Mars";
-  continuePlaying();
+  button.innerHTML = "Upgrade";
+  button.classList.add("btn");
+  button.onclick = function () {
+    buyUpgrade();
+    continuePlaying();
+  };
+  clearInterval(play);
+  document.getElementById("Area").innerHTML = "You arrived to Mars, click Upgrade to use the Martian technology and upgrade your engine.";
 }
 
 function Europa() {
-  document.getElementById("Area").innerHTML = "You arrived to Europa";
-  continuePlaying();
+  button.innerHTML = "Upgrade";
+  button.classList.add("btn");
+  button.onclick = function () {
+    buyUpgrade();
+    continuePlaying();
+  };
+  clearInterval(play);
+  document.getElementById("Area").innerHTML = "You arrived to Europa, click Upgrade to use better fuel and get more speed.";
 }
 function continuePlaying() {
-  clearInterval(play);
   var button = document.getElementById("Continue");
-  button.innerHTML = "Click to Continue";
+  button.innerHTML = "Continue";
   button.classList.add("btn");
   button.onclick = function () {
     continueClicked();
